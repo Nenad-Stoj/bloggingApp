@@ -1,17 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
+import App from './App';
 
-
-class ShoppingList extends React.Component{
-
-    render(){
-
-
-    }
-
-
-
-
-}
-export default ShoppingList;
+ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
