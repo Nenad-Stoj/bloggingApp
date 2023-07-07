@@ -7,6 +7,8 @@ const BlogList = ({blogs, title}) => {
         <div className="blog-preview" key={blog.id}>
             <h2>Title: {blog.title}</h2>
             <p>Author: {blog.author}</p>
+            <p>Author: {blog.author}</p>
+
         </div>)
     })}
 </div> );
