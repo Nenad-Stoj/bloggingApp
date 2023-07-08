@@ -1,7 +1,9 @@
 import './App.css';
 import Navbar from './Navbar';
 import Home from './Home';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Create from './Create';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import BlogDetails from './BlogDetails';
 
 
 function App() {
@@ -12,9 +14,17 @@ function App() {
       <div className="App">
         <Navbar />
         <div className='content'>
-          <Home />
-          <p>liked {likes} times</p>
-          <p>{employment.company}<br />{employment.position}</p>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/create">
+              <Create />
+            </Route>
+            <Route exact path="/details/:id">
+              <BlogDetails />
+            </Route>
+          </Switch>
         </div>
       </div>
     </Router>
